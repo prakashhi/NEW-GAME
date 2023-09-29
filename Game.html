@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        /* css for html page  */
+        *
+        {
+            margin: 1;
+        }
+        h1{
+            text-align: center;
+            background-color: rgb(13, 25, 101);
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+        }
+        nav  a
+        {
+        text-decoration:none;
+        padding: 10px ;
+        color: white;
+        float: right;
+
+        }
+        nav 
+        {
+        background-color: rgb(10, 10, 96);
+        overflow: hidden;
+        border-radius: 5px;
+        font-size: 1.4em;
+        }
+        nav a:hover
+        {
+
+        background: white;
+        color: black;
+        }
+            
+        .container
+        {
+
+     
+            height: 35rem;
+            width: 60rem;
+            margin: 5px;
+            border-radius: 10px;
+            /* background-color: rgb(123, 183, 235); */
+            overflow: hidden;
+        }
+        
+        p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        #con
+        {
+
+           display: flex;
+            /* justify-content: center; */
+        }
+        img{
+            border-radius: 10px;
+        }
+        button
+        {
+            width: 100%;
+            height: 4rem;
+          font-size: 1.3em;
+          background-color: rgb(14, 14, 112);
+          color: white;
+          border-radius: 10px;
+          
+
+        }
+        button:hover
+        {
+            color: rgb(38, 255, 0);
+            width: 100%;
+            height: 6rem;
+
+
+        }
+</style>
+</head>
+<body>
+    <h1>Hello play this my game on my website<br>
+    <br>
+    <br>
+ <marquee> Hey play this game for brain power </marquee>      
+ 
+    </h1>
+    <nav>
+   
+        <A href="">HOME</A>
+       <A href="">LOG IN </A>
+        <A href="about.html">ABOUT US</A>
+        
+           </nav>
+    <br><br>
+<!-- first card code -->
+<div id="con">
+
+<div  class="container">
+        
+            <img src="file:///C:/Users/DREAM/Pictures/Originals/Jujutsu-Kaisen-Wallpaper-14.jpg" alt="" width="100%">
+        
+           <p> Play game for gusee under 10 Number</p>
+            
+            <button onclick="code1()">Play now</button>
+        
+</div> 
+
+<div  class="container">
+        
+            <img src="file:///C:/Users/DREAM/Pictures/wp9216000.jpg" alt="" width="100%">
+        
+            <p>Play game for gusee under 100 Number</p>
+          
+            <button onclick="code2()">Play now</button>
+        
+   
+</div>
+
+</div>
+
+<!-- second raw card code -->
+<div id="con">
+
+<div  class="container">
+        
+            <img src="file:///C:/Users/DREAM/Pictures/wp9273533.jpg" alt="" width="100%">
+       
+            <p> Play for Stone,Paper,Scissor</p>
+            
+            <button onclick="code3()">Play now</button>
+</div>
+
+<div  class="container">
+        
+            <img src="file:///C:/Users/DREAM/Pictures/wallpaperflare.com_wallpaper%20(2).jpg" alt="" width="100%">
+        
+            <p>comming soon</p>
+       <!-- <button onclick="code2()">Play now</button> -->
+       
+   
+</div>
+
+</div>
+    
+     
+<br><br><br>
+<h2>Rules:
+<br>
+        *This is game for gusee number in two stages. <br>
+        *if you want to quite game to enter 0.
+
+</h2>
+<button onclick="code4()">Find percentage</button>
+<h1>Name : PRAJAPATI PRAKASH H. <br>
+  
+    FOLLOW IN  :- <a href="https://instagram.com/prakashprajapati_1239?igshid=YWYwM2I1ZDdmOQ==">Instagram</a><br>
+    FOLLOW ON :-  <a href="https://www.linkedin.com/in/prakash-prajapati-013a0a253">LinkedIn</a>
+    </h1>
+
+ <script>
+ //code for 10 in gusee
+function code1()
+{
+    
+//Declration of elements 
+ let name
+name = prompt("first enter your name:")
+let x = Math.floor((Math.random()* 10)+1);
+let a = Number.parseInt(prompt(name+"\tEnter your guess no (1 to 10)for win:\nchanse is:"))
+let guess = 1
+let i = 1
+
+
+ //while loop  
+
+while(a !== x)
+{
+//input from user
+
+a = Number.parseInt(prompt(name+"\tEnter your guess no(1 to 10)for win\nchanse is"+(i++)+"of:"))
+guess++
+
+//if number is 1 to 10
+if(x>5 && x<=10)
+       {
+            alert("Numner is between 6 to 10")
+            
+        }
+
+else if(x=>1 && x<=5)
+        {
+            alert("Numner is between 1 to 5")
+        }
+
+//if you want to quite the game
+if(a == 0)
+      {
+        alert("Your try is over restart game\nReal number is:"+x)
+        confirm("You  want quite the game?")
+         break
+      }
+      
+}
+
+ //if you win 
+if(a == x)
+      { 
+         
+        alert("!!!CONGRACHULATION!!! in chanse:"+guess+"\nYour guess number is right and no: "+x)
+     
+      }
+    
+}
+
+
+     
+
+//code for 100 number guess
+function code2()
+{
+//declaration of elements
+let name
+name = prompt("first enter your name:")
+let x = Math.floor((Math.random()* 100)+1);
+let a = Number.parseInt(prompt(name+"\tEnter your guess no (1 to 100)for win:\nchanse is:"))
+let guess = 1
+let i = 1
+
+//while loop  
+
+while(a !== x)
+{
+   
+//input from user
+a = Number.parseInt(prompt(name+"\tEnter your guess no(1 to 100)for win\nchanse is"+(i++)+"of:"))
+ guess++
+
+ //number beetween 1 to 100 
+       
+ if( x>75 && x<=90)
+        {
+            alert("Numner is between 76 to 90")
+        }
+else if( x>50 && x<=75)
+        {
+            alert("Numner is between 51 to 75")
+        }       
+else if( x>25 && x<=50)
+        {
+            alert("Numner is between 26 to 50")
+        }
+else if( x=>1 && x<=25)
+        {
+            alert("Numner is between 1 to 25")
+        }
+ 
+//if you wnt to quite the game 
+      if(a == 0)
+      {
+        alert("Your try is over restart game\nReal number is:"+x)
+        confirm("You want quite the game?")
+         break
+      }
+      
+}
+
+ //if you win the game
+    if(a == x)
+        { 
+         alert("!!!CONGRACHULATION!!! in chanse:"+guess+"\nYour guess number is right and no: "+x)
+      }
+           
+
+}
+
+
+//code for 3rd game stone paper and seccior
+function code3()
+{
+    let i=0;
+    let u=0;
+    let c=0;
+    for(i=0;i<=3;i++){
+    let user = prompt("rules:\ns=Stone\np=Paper\nsc=Scissor\tTime:"+(i+1)+"\nEnter s,p or sc:")
+    let cpuI = Math.floor(Math.random()* 3);
+    let cpu = ["s","p","si"][cpuI]
+
+ 
+
+    if(cpu === "s" && user === "s")
+    {
+        alert(`!Draw match!CPU IS:${cpu}`);
+
+    }
+
+    else if(cpu === "p" && user === "p")
+    {
+        alert(` !Draw match!CPU IS:${cpu}`)
+    }
+
+    else if(cpu === "sc" && user === "sc")
+    {
+        alert(`!Draw match!CPU IS:${cpu}`)
+    }
+
+    else  if(cpu === "s" && user === "sc")
+    {
+        alert(`CPU win!! CPU IS:${cpu}`)
+        c++;
+    }
+    else  if(cpu === "sc" && user === "s")
+    {
+        alert(`YOUwin!! CPU IS:${cpu}`)
+        u++;
+
+    }
+    else  if(cpu === "p" && user === "s")
+    {
+        alert(`CPU win!!CPU IS:${cpu}`);
+        c++;
+    }
+    else  if(cpu === "s" && user === "p")
+    {
+        alert(`YOU win!!CPU IS:${cpu}`)
+        u++;
+    }
+    else  if(cpu === "sc" && user === "p")
+    {
+        alert(`CPU win!CPU IS:${cpu}`)
+        c++;
+    }
+    else  if(cpu === "p" && user === "sc")
+    {
+        alert(`YOU win!! CPU IS:${cpu}`)
+        u++;
+    }
+   
+      
+}
+    alert(`CPU SCORE:${c}\nYOUR SCORE:${u}`)
+
+} 
+
+//code 4 for find percentage with ncpi or spi
+
+function code4(){
+
+    let get = Number.parseFloat( prompt("Enter your cpi or spi:"))
+
+    if(get<=10)
+    {
+     let cal = Number.parseFloat(get-0.5)*10;
+     alert("Your percentge: "+cal);
+    }
+    else{
+        alert("Enter no under 10")
+    }
+   
+}
+
+
+
+ </script>
+ 
+</body>
+</html>
